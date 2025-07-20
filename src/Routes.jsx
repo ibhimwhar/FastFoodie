@@ -10,7 +10,7 @@ const RouteComponents = () => {
 
     useEffect(() => {
         axios
-            .get("https://devsapihub.com/api-fast-food")
+            .get(`${import.meta.env.VITE_API_URL}`)
             .then((response) => setProducts(response.data))
             .catch((err) => console.log(err));
     }, []);
